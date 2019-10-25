@@ -1,0 +1,262 @@
+@charset "UTF-8";
+/* Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@arielkewladret 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+Code Issues 0 Pull requests 0 Projects 0 Wiki Security Pulse Community
+aloha/css/reset.css
+@arielkewladret arielkewladret Init git
+77fe1e6 13 days ago
+48 lines (47 sloc)  1.07 KB */
+/* * http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  /* font: inherit; */
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* © 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About */
+@font-face {
+  font-family: "Open Sans";
+  src: url("OpenSansLight-Italic.eot");
+  src: url("OpenSansLight-Italic.eot?#iefix") format("embedded-opentype"), url("OpenSansLight-Italic.woff2") format("woff2"), url("OpenSansLight-Italic.woff") format("woff"), url("OpenSansLight-Italic.ttf") format("truetype"), url("OpenSansLight-Italic.svg#OpenSansLight-Italic") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("OpenSans-BoldItalic.eot");
+  src: url("OpenSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("OpenSans-BoldItalic.woff2") format("woff2"), url("OpenSans-BoldItalic.woff") format("woff"), url("OpenSans-BoldItalic.ttf") format("truetype"), url("OpenSans-BoldItalic.svg#OpenSans-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("OpenSans-Light.eot");
+  src: url("OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("OpenSans-Light.woff2") format("woff2"), url("OpenSans-Light.woff") format("woff"), url("OpenSans-Light.ttf") format("truetype"), url("OpenSans-Light.svg#OpenSans-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("OpenSans-Bold.eot");
+  src: url("OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("OpenSans-Bold.woff2") format("woff2"), url("OpenSans-Bold.woff") format("woff"), url("OpenSans-Bold.ttf") format("truetype"), url("OpenSans-Bold.svg#OpenSans-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+body {
+  background: black; }
+
+.site {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  min-height: 100vh;
+  max-height: 100%; }
+
+h1 {
+  color: white;
+  font-size: 16px;
+  font-family: "OpenSans-Light", sans-serif;
+  padding: 20px;
+  font-weight: 300; }
+
+.logo {
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin: 56px; }
+
+footer {
+  color: #c2c2c2;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif; }
+
+img {
+  padding: 5px;
+  margin-top: 3px;
+  height: auto;
+  max-width: 100%; }
+
+.select {
+  background-color: white;
+  font-size: 16px;
+  background-color: white;
+  width: 56%;
+  height: 28px; }
+
+.selection-container {
+  text-align: center; }
+
+/* hide images */
+@media (min-width: 600px) {
+  .logo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row; } }
+
+@media screen and (min-width: 1000px) {
+  body {
+    background: black; }
+  .logo {
+    -webkit-box-pack: left;
+            justify-content: left;
+    width: 100%; }
+  footer {
+    text-align: left;
+    width: 100%; } }
