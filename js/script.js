@@ -1,24 +1,42 @@
-document.addEventListener("DOMContentLoaded", function() {
-  $("button").on("click", function() {
+// functions
+$(function() {
+  // $("select").selectric();
+  // $(document).ready());
+  // $(#'navdrop-down')
+
+  // event listeners + behaviours + loops/timeout
+
+  // select elements
+  const dropdown = $("#select");
+  const storyContainer = $("#stories");
+  const logo = $(".logo");
+
+  // on select
+  dropdown.on("change", function(event) {
+    const category = event.target.value;
+
+    // show loader
+
+    // get stories
     $.ajax({
       method: "GET",
-      url:
-        "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=L4iO7u1rIyh2nxWEMFiKU5SOX79LQHo8"
+      url: `https://api.nytimes.com/svc/topstories/v2/${category}.json?api-key=L4iO7u1rIyh2nxWEMFiKU5SOX79LQHo8`
     })
-
       .done(function(data) {
+        // fill grid with stories
         const articles = data.results;
 
-        console.log(data.results[2]);
+        logo.addClass("move-up");
 
+        // reveal grid with stories
         $.each(articles, function(key, value) {
-          //   console.log(value.section);
-          $(".name-list").append(
-            "<li>[" + value.section + "] " + value.title + "</li>"
+          storyContainer.append(
+            "<li>" + value.section + ": " + value.title + "</li>"
           );
         });
       })
       .fail(function() {
+        alert("Something went wrong");
         // $(".user-name").append("Sorry there was an error");
       });
   });

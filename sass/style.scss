@@ -3,3 +3,36 @@
 @import "variables";
 @import "mixins";
 @import "main";
+
+// .move-up {
+//   transform: translateY(-200px);
+// }
+
+.site {
+  @if ($base-font-size <= 16) {
+    color: #c2c2c2;
+    font-family: "Open-Sans", sans-serif;
+  } @else {
+    color: yellow;
+  }
+  //   p {
+  //     @if ($font-family) ;
+  //   }
+  // }
+
+  .logo {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 56px;
+    @include tablet {
+      flex-direction: row;
+    }
+    @include desktop {
+      justify-content: left;
+      width: 100%;
+    }
+  }
+}

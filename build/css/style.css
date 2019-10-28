@@ -204,7 +204,7 @@ body {
 h1 {
   color: white;
   font-size: 16px;
-  font-family: "OpenSans-Light", sans-serif;
+  font-family: "Open-Sans-Light", sans-serif;
   padding: 20px;
   font-weight: 300; }
 
@@ -236,9 +236,9 @@ img {
 .select {
   background-color: white;
   font-size: 16px;
-  background-color: white;
-  width: 56%;
-  height: 28px; }
+  width: 80%;
+  height: 28px;
+  margin-top: 20px; }
 
 .selection-container {
   text-align: center; }
@@ -260,3 +260,30 @@ img {
   footer {
     text-align: left;
     width: 100%; } }
+
+.site {
+  color: #c2c2c2;
+  font-family: "Open-Sans", sans-serif; }
+  .site .logo {
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    margin: 56px; }
+    @media (min-width: 600px) {
+      .site .logo {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+                flex-direction: row; } }
+    @media (min-width: 1000px) {
+      .site .logo {
+        -webkit-box-pack: left;
+                justify-content: left;
+        width: 100%; } }

@@ -12,9 +12,9 @@ body {
 }
 
 h1 {
-  color: white;
-  font-size: 16px;
-  font-family: "OpenSans-Light", sans-serif;
+  color: $base-font-color;
+  font-size: $base-font-size;
+  font-family: $font-family;
   padding: 20px;
   font-weight: 300;
 }
@@ -44,9 +44,9 @@ img {
 .select {
   background-color: white;
   font-size: 16px;
-  background-color: white;
-  width: 56%;
+  width: 80%;
   height: 28px;
+  margin-top: 20px;
 }
 
 .selection-container {
