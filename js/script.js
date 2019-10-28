@@ -25,14 +25,20 @@ $(function() {
       .done(function(data) {
         // fill grid with stories
         const articles = data.results;
+        console.log(articles);
 
         logo.addClass("move-up");
 
         // reveal grid with stories
         $.each(articles, function(key, value) {
-          storyContainer.append(
-            "<li>" + value.section + ": " + value.title + "</li>"
-          );
+          storyContainer.append(`
+            <li>
+              <a target="_blank" href="${value.url}">
+              <img src="${value.multimedia[4].url}"> 
+              <p>${value.abstract}</p>
+              </a>s
+            </li>
+          `);
         });
       })
       .fail(function() {
