@@ -2,14 +2,9 @@ body {
   background: $background-color;
 }
 
-section.top-stories.image-grid {
-  display: grid;
-  grid-template: 50%;
-}
-
 .site {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   min-height: 100vh;
@@ -52,6 +47,18 @@ img {
   width: 80%;
   height: 28px;
   margin-top: 20px;
+}
+
+p {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: baseline;
+  color: white;
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  // width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .selection-container {

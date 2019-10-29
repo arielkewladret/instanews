@@ -9,15 +9,14 @@
 // }
 
 .site {
-  @if ($base-font-size <= 16) {
-    color: #c2c2c2;
-    font-family: "Open-Sans", sans-serif;
-  } @else {
-    // color: yellow;
-  }
-  //   p {
-  //     @if ($font-family) ;
-  //   }
+  color: #c2c2c2;
+  font-family: "Open-Sans", sans-serif;
+  // @if ($base-font-size <= 16) {
+  //   color: #c2c2c2;
+  //   font-family: "Open-Sans", sans-serif;
+  // }
+  // img {
+  //   display: flex;
   // }
 
   .logo {
@@ -32,7 +31,13 @@
     }
     @include desktop {
       justify-content: left;
-      width: 100%;
+      // width: 100%;
     }
+  }
+  .article {
+    display: flex;
+    flex-wrap: no-wrap;
+    height: 400px;
+    margin: 0px;
   }
 }

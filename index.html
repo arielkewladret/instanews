@@ -8,63 +8,41 @@
     <!-- <link rel="stylesheet" href="css/reset.css" /> -->
     <!-- <link rel="stylesheet" href="./css/fonts.css" /> -->
     <link rel="stylesheet" href="build/css/style.min.css" />
- 
   </head>
 
   <body class="site">
-      <div class="logo"> <img src="../assets/images/nyt-logo.svg" alt = ""/>
-     <div class="selection-container">
-       <p>Choose a section: </p> 
-        <select class="select" id="select"> 
-            <option value="">Sections...</option>
+    <div class="logo">
+      <img src="../assets/images/nyt-logo.svg" alt="" />
+      <div class="selection-container">
+        <p>Choose a section:</p>
+        <form>
+          <select class="select" id="select">
+            <option disabled="disabled" selected="selected">Sections...</option>
             <option value="home">Home</option>
             <option value="arts">Arts</option>
             <option value="business">Business</option>
             <option value="technology">Technology</option>
             <option value="fashion">Fashion</option>
-            </select>
+          </select>
+        </form>
+      </div>
+    </div>
 
-        </div>
+    <section class="top-stories image-grid"></section>
 
+    <!-- <img src="../assets/images/ajax-loader.gif" alt="image-loader" style="display:none"> -->
+    <!-- </section> -->
 
+    <footer>
+      <p>@Copyright 2019 INSTANEWS</p>
+    </footer>
 
-            <section class="top-stories image-grid">
-                <ul id="stories">
-                    <!-- <link rel="stylesheet" href="selectric.css"> --> 
-
-                    <li img src=""value ="0"></li><a></a>
-                    <li img src=""value ="1"></li><a></a>
-                    <li img src="" value ="2"></li><a></a>
-                    <li img src=""value ="3"></li><a></a>
-                    <li img src=""value ="4"></li><a></a>
-                    <li img src=""value ="5"></li><a></a>
-                    <li img src="" value ="6"></li><a></a>
-                    <li img src="" value="7"></li><a></a>
-                    <li img src="" value="8"></li><a></a>
-                    <li img src="" value="9"></li><a></a>
-                    <li img src="" value="10"></li><a></a>
-                    <li img src="" value="11"></li><a></a>
-                </ul>
-            </section>
-      
-          </div>
-          
-          <!-- <img src="../assets/images/ajax-loader.gif" alt="image-loader" style="display:none"> -->
-        <!-- </section> -->
-
-
-<footer>
-    <p> @Copyright 2019 INSTANEWS </p>
-         </footer>
-
-</body>
-</html>
-<!-- <script src="jquery.selectric.min.js"></script> -->
-<script
-src="https://code.jquery.com/jquery-3.4.1.min.js"
-integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-crossorigin="anonymous"
-></script>
+    <!-- <script src="jquery.selectric.min.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
     <script src="./build/js/script.min.js"></script>
-   </body>
+  </body>
 </html>
