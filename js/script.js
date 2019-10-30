@@ -1,6 +1,5 @@
 // functions
 $(function() {
-  // $("select").selectric();
   // $(document).ready());
   // $(#'navdrop-down')
 
@@ -35,9 +34,11 @@ $(function() {
 
         // reveal grid with stories
         $.each(topTwelve, function(key, value) {
+          const link = value.url;
           console.log("this", value);
           $(".top-stories").append(
-            `<article class="article" style="background-image:url(${value.multimedia[4].url}); background-size: cover;"><p>${value.abstract}</p></article>`
+            `<a class = 'nysite' href= ${link} target="_blank">
+            <article class="article" style="background-image:url(${value.multimedia[4].url}); background-size: cover;"><p>${value.abstract}</p></a></article>`
           );
         });
       })
