@@ -41,7 +41,8 @@ $(function() {
             <article class="article" style="background-image:url(${value.multimedia[4].url}); background-size: cover;"><p>${value.abstract}</p></a></article>`
           );
         });
-        // const moveUp = document.querySelector(".move-up");
+
+        $("#site-header").addClass("header-small");
 
         // moveUp.addEventListener("click", () => {
         //   header.classList.toggle("select");
