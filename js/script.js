@@ -1,18 +1,18 @@
 // functions
 $(function() {
-  // $(document).ready());
-  // $(#'navdrop-down')
-
   // event listeners + behaviours + loops/timeout
 
   // select elements
   const dropdown = $("#select");
+  // const dropdown = $("#change");
 
   // on select
-  dropdown.on("change", function(event) {
+  dropdown.on("change", function() {
     const category = $(this).val();
 
     // show loader
+    $("#loader").removeClass("hide");
+    $("#loader").addClass("show");
 
     // get stories
     $.ajax({
@@ -21,6 +21,7 @@ $(function() {
       dataType: "json"
     })
       .done(function(data) {
+        $(".stories").empty();
         // fill grid with stories
         const imageOnly = data.results.filter(function(items) {
           if (items.multimedia[4] !== undefined) {
@@ -38,34 +39,23 @@ $(function() {
           console.log("this", value);
           $(".top-stories").append(
             `<a class = 'nysite' href= ${link} target="_blank">
-            <article class="article" style="background-image:url(${value.multimedia[4].url}); background-size: cover;"><p>${value.abstract}</p></a></article>`
+              <article class="article" style="background-image:url(${value.multimedia[4].url}); background-size: cover;">
+                <p>${value.abstract}</p>
+                  
+              </article>
+            </a>`
           );
         });
 
         $("#site-header").addClass("header-small");
-
-        // moveUp.addEventListener("click", () => {
-        //   header.classList.toggle("select");
-        // });
       })
       .fail(function() {
         alert("Something went wrong");
         // $(".user-name").append("Sorry there was an error");
+      })
+      .always(function() {
+        $("#loader").removeClass("show");
+        $("#loader").addClass("hide");
       });
   });
 });
-/*
-  jQuery also has a document ready you can use
-  NOTE all of these do the same thing, you just need one
-  
-  $( document ).ready(function() {
-      console.log( "ready!" );
-  });
-  
-  OR the Shorthand
-  
-  $(function() {
-      console.log( "ready!" );
-  });
-  
-  */

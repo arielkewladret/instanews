@@ -216,8 +216,6 @@ h2 {
   font-weight: 300; }
 
 .logo {
-  -webkit-box-flex: 1;
-          flex-grow: 1;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -236,7 +234,8 @@ h2 {
   color: #c2c2c2;
   position: relative;
   background: none;
-  font-weight: 300px; }
+  font-weight: 300;
+  padding: 20px; }
 
 .select {
   background-color: white;
@@ -251,36 +250,35 @@ h2 {
   border-left: 6px solid transparent;
   border-right: 0px solid transparent; }
 
-p {
-  color: white;
-  bottom: 0px;
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
-  font-size: 16px;
-  font-family: "Open-Sans-Light", sans-serif;
-  line-height: 1.5;
-  font-weight: 300px; }
-
 .article {
-  max-width: 50%;
-  max-height: 50%;
   background-size: cover;
   height: 400px;
-  width: 400px;
   position: relative;
   display: -webkit-box;
   display: flex; }
+  .article p {
+    color: white;
+    bottom: 0px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    font-family: "Open-Sans-Light", sans-serif;
+    line-height: 1.5;
+    font-weight: 300; }
 
 .top-stories {
-  display: -webkit-box;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 100%; }
+  display: grid;
+  grid-template-columns: 1fr; }
+  @media only screen and (min-width: 600px) {
+    .top-stories {
+      grid-template-columns: 1fr 1fr; } }
+  @media only screen and (min-width: 1240px) {
+    .top-stories {
+      grid-template-columns: 1fr 1fr 1fr; } }
 
-/* hide images */
 .header-small {
   -webkit-transform: translateX(-60px);
           transform: translateX(-60px);
@@ -289,16 +287,6 @@ p {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-direction: row; }
-    @media (min-width: 600px) {
-      .header-small .logo {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-                flex-direction: row; } }
-    @media (min-width: 1240px) {
-      .header-small .logo {
-        -webkit-box-pack: left;
-                justify-content: left;
-        width: 100%; } }
   .header-small .logo img {
     -webkit-transform: scale(0.4);
             transform: scale(0.4);
@@ -307,5 +295,12 @@ p {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
             flex-direction: none; }
-  .header-small h1 {
-    padding: 20px; }
+
+h1 {
+  padding: 20px; }
+
+.show {
+  display: block; }
+
+.hide {
+  display: none; }

@@ -1,11 +1,5 @@
-@mixin tablet {
-  @media (min-width: $break-mid) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: $break-large) {
+@mixin breakpoint($width) {
+  @media only screen and (min-width: $width) {
     @content;
   }
 }
