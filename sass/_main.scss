@@ -61,7 +61,15 @@ h2 {
   background: none;
   font-weight: 300;
   padding: 20px;
+
 }
+
+
+@include breakpoint($tablet) {
+  & {
+    text-align: center;
+
+  }
 
 .select {
   background-color: white;
@@ -96,7 +104,7 @@ h2 {
     line-height: 1.5;
     font-weight: 300;
   }
-}
+
 
 .top-stories {
   display: grid;
@@ -115,21 +123,27 @@ h1 {
 }
 
 .header-small {
-  // transform: translateX(-400px);
-  // min-height: 10vh;
-  transition: 1.5s;
+  transition: all 1.5s;
   height: 280px;
+  margin: 0; 
 
   @include breakpoint($tablet) {
     height: 200px;
+    transition-duration: 2.5s;
+    transform: translateX(-20px);
+
+    @include breakpoint($desktop) {
+      height: 200px;
+      transition-duration: 2.5s;
+      transform: translateX(-25px);
+    }
   }
 
   .logo img {
     height: 100px;
     transition: 1.5s;
-    // transform: scale(0.4);
   }
-}
+
 
 .loader {
   position: absolute;
@@ -137,15 +151,4 @@ h1 {
   left: 50vw;
   transform: translate(-50%, -50%);
   height: 100px;
-  // animation: spin 5s;
-  // transform-origin: center center;
 }
-
-// @keyframes spin {
-//   0% {
-//     transform: rotate(0deg);
-//   }
-//   100% {
-//     transform: rotate(360deg);
-//   }
-// }
