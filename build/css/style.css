@@ -198,8 +198,11 @@ body {
           align-items: center;
   -webkit-box-pack: center;
           justify-content: center;
-  min-height: 100vh;
-  max-height: 100%; }
+  height: 90vh; }
+  @media only screen and (min-width: 1240px) {
+    .site-header {
+      -webkit-box-align: baseline;
+              align-items: baseline; } }
 
 h1 {
   color: white;
@@ -226,6 +229,15 @@ h2 {
   -webkit-box-pack: center;
           justify-content: center;
   margin: 0px; }
+  .logo img {
+    height: 292px; }
+  @media only screen and (min-width: 600px) {
+    .logo {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row; }
+      .logo img {
+        padding: 36px; } }
 
 .copyright p {
   font-family: "Open-Sans-Light", sans-serif;
@@ -279,52 +291,25 @@ h2 {
     .top-stories {
       grid-template-columns: 1fr 1fr 1fr; } }
 
-.header-small {
-  -webkit-transform: translateX(-400px);
-          transform: translateX(-400px);
-  min-height: 10vh;
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
-  height: auto; }
-  .header-small .logo {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row; }
-  .header-small .logo img {
-    -webkit-transform: scale(0.4);
-            transform: scale(0.4);
-    padding: 0px;
-    margin: 0px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: none; }
-
 h1 {
   padding: 20px; }
 
-.show {
-  display: block; }
+.header-small {
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  height: 280px; }
+  @media only screen and (min-width: 600px) {
+    .header-small {
+      height: 200px; } }
+  .header-small .logo img {
+    height: 100px;
+    -webkit-transition: 1.5s;
+    transition: 1.5s; }
 
-.hide {
-  display: block; }
-
-#loader {
-  height: 100px;
-  -webkit-animation: spin 5s;
-          animation: spin 5s; }
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
+.loader {
+  position: absolute;
+  top: 85vh;
+  left: 50vw;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 100px; }

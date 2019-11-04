@@ -1,18 +1,16 @@
-// functions
 $(function() {
   // event listeners + behaviours + loops/timeout
 
   // select elements
   const dropdown = $("#select");
-  // const dropdown = $("#change");
+  const loader = $("#loader");
 
   // on select
   dropdown.on("change", function() {
     const category = $(this).val();
 
     // show loader
-    $("#loader").removeClass("hide");
-    $("#loader").addClass("show");
+    loader.show();
 
     // get stories
     $.ajax({
@@ -21,7 +19,8 @@ $(function() {
       dataType: "json"
     })
       .done(function(data) {
-        $(".stories").empty();
+        $("#top-stories").empty();
+
         // fill grid with stories
         const imageOnly = data.results.filter(function(items) {
           if (items.multimedia[4] !== undefined) {
@@ -37,7 +36,7 @@ $(function() {
         $.each(topTwelve, function(key, value) {
           const link = value.url;
           console.log("this", value);
-          $(".top-stories").append(
+          $("#top-stories").append(
             `<a class = 'nysite' href= ${link} target="_blank">
               <article class="article" style="background-image:url(${value.multimedia[4].url}); background-size: cover;">
                 <p>${value.abstract}</p>
@@ -54,8 +53,7 @@ $(function() {
         // $(".user-name").append("Sorry there was an error");
       })
       .always(function() {
-        $("#loader").removeClass("show");
-        $("#loader").addClass("hide");
+        loader.hide();
       });
   });
 });
