@@ -12,7 +12,6 @@ body {
   transition: width 0.4s ease-in-out;
 
   @include breakpoint($desktop) {
-    // align-items: baseline;
     width: 30%;
   }
 }
