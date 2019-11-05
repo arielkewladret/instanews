@@ -2,7 +2,7 @@
 
 To view please open on any browser using index.html
 
-> Info: This a one page mobile first responsive site featuring New York Times News Articles top stories upon user selection.
+> Info: This a one page mobile first responsive site featuring the 'New York Times' news articles top stories upon user selection.
 
 Modalities implemented to create this site:
 
